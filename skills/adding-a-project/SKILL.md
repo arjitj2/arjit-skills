@@ -13,7 +13,7 @@ When a new project is created, it needs to be added to both the personal site (a
 
 - **Site projects**: `~/repos/arjit-me/lib/projects.ts`
 - **Resume projects**: `~/repos/arjit-resume/resume/projects.tex`
-- **Resume PDF**: `~/repos/arjit-resume/resume.pdf` (symlinked to `~/Documents/arjit_jaiswal_resume.pdf`)
+- **Resume PDF**: `~/repos/arjit-resume/arjit_jaiswal_resume.pdf` (symlinked to `~/Documents/arjit_jaiswal_resume.pdf`)
 
 ## Process
 
@@ -31,7 +31,7 @@ When a new project is created, it needs to be added to both the personal site (a
 3. **Compile the resume PDF**:
    ```bash
    cd ~/repos/arjit-resume
-   xelatex resume.tex
+   make build
    ```
    The symlink at `~/Documents/arjit_jaiswal_resume.pdf` auto-updates.
 
