@@ -4,15 +4,23 @@ Personal collection of Claude Code skills.
 
 ## Skills
 
-### swiftui-design-principles
+### adding-a-project
 
-Design principles for building polished, native-feeling SwiftUI apps and widgets. Ensures proper spacing, typography, colors, and widget implementations.
+Workflow for adding a new project to the personal site (arjit-me) and resume (arjit-resume), compiling the PDF, and pushing live.
+
+### creating-skills
+
+Meta-skill for creating new skills in this repo and symlinking them into agent directories.
 
 ### frontend-slides
 
 Create animation-rich HTML presentations from scratch or by converting PowerPoint files.
 
 Originally created by [@zarazhangrui](https://github.com/zarazhangrui/frontend-slides).
+
+### swiftui-design-principles
+
+Design principles for building polished, native-feeling SwiftUI apps and widgets. Ensures proper spacing, typography, colors, and widget implementations.
 
 ## Setup
 

@@ -24,7 +24,11 @@ All personal skills live in `~/repos/arjit-skills/skills/<skill-name>/`. Skills 
    ln -sf ~/repos/arjit-skills/skills/<skill-name> ~/.claude/skills/<skill-name>
    ```
 
-3. **Commit and push:**
+3. **Update the repo README** (`~/repos/arjit-skills/README.md`):
+   - Add the new skill to the Skills section in alphabetical order
+   - Include a one-line description
+
+4. **Commit and push:**
    ```bash
    cd ~/repos/arjit-skills
    git add skills/<skill-name>
