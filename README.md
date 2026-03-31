@@ -12,6 +12,10 @@ Workflow for adding a new project to the personal site (arjit-me) and resume (ar
 
 Meta-skill for creating new skills in this repo and symlinking them into agent directories.
 
+### ios-simulator-testing
+
+End-to-end iOS simulator testing using blitz-iphone MCP and XcodeBuildMCP. Covers which tool to use and when, gesture mechanics, screenshot discipline, and interaction patterns.
+
 ### frontend-slides
 
 Create animation-rich HTML presentations from scratch or by converting PowerPoint files.
