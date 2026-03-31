@@ -3,7 +3,7 @@ name: ios-simulator-testing
 description: End-to-end iOS simulator testing using blitz-iphone MCP and XcodeBuildMCP. Use this skill when testing an iOS app on the simulator — building, launching, interacting with the UI, and verifying state. Covers which MCP to use and when, gesture mechanics, and interaction patterns learned from real test runs.
 metadata:
   author: arjitjaiswal
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 ## Which tool to use and when
@@ -134,6 +134,29 @@ To leave the current app and go to the home screen:
 To open another app (e.g. Photos to verify an export):
 - Press HOME, then use Spotlight search: swipe down on home screen → type app name → tap result
 - Or use `launch_app` with the bundle ID if you know it
+
+---
+
+## XCUITest vs agent-driven testing: when to use which
+
+XcodeBuildMCP's `test_sim` can run XCUITest suites, which is a different mode of UI testing from the interactive blitz-iphone approach. They're complementary — choose based on what you're trying to achieve.
+
+### Use `test_sim` + XCUITest when:
+- The flow is well-defined and repeatable (login, onboarding, form submission)
+- You want **regression coverage** that runs in CI without an agent
+- Speed matters — XCUITest runs are 5-10x faster than agent-driven interaction
+- The project already has XCUITest infrastructure to build on
+
+### Use blitz-iphone agent-driven testing when:
+- You're doing **exploratory testing** — navigating a complex multi-step flow where the next action depends on what the previous one produced
+- The flow requires **visual judgment** (does this photo look correctly letterboxed? does this animation feel right?)
+- You're testing a flow that doesn't yet have XCUITest coverage and you want to smoke-test it quickly
+- The flow involves system-level interactions (Photos app, permission dialogs, other apps) that are awkward to script in XCUITest
+
+### Ideal division of labour
+- Write XCUITest for well-defined, high-value paths (authentication, checkout, critical happy paths)
+- Use agent-driven blitz-iphone testing for exploratory sessions, new features before tests exist, and anything requiring visual confirmation
+- After an agent-driven session surfaces issues or validates a flow, that's a good signal to codify it as an XCUITest
 
 ---
 
