@@ -28,8 +28,6 @@ npx skills add arjitj2/arjit-skills --list
 
 Handle GitHub Copilot PR review comments end-to-end, including code fixes, verification, replies, and thread resolution.
 
-Originally created in `/Users/arjitjaiswal/.agents/skills/address-copilot-review`.
-
 ### adding-a-project
 
 Workflow for adding a new project to the personal site (arjit-me) and resume (arjit-resume), compiling the PDF, and pushing live.
