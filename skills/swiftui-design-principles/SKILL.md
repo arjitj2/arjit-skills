@@ -218,6 +218,34 @@ HStack {
 .frame(height: 70)                  // way too tall
 ```
 
+### Swipe actions with confirmation
+If a `List` row needs a confirmation step before deletion, do **not** use `Button(role: .destructive)` in `swipeActions`.
+
+SwiftUI can treat a destructive swipe button as an immediate delete intent and run the optimistic row-removal animation before your alert or confirmation dialog resolves. The visible symptom is that rows below the swiped row jump upward, then fall back when deletion is cancelled or deferred.
+
+```swift
+// WRONG - List may animate the row away before confirmation completes
+.swipeActions {
+    Button(role: .destructive) {
+        pendingDelete = item
+    } label: {
+        Label("Delete", systemImage: "trash")
+    }
+}
+
+// RIGHT - keep the row stable, style it as destructive visually
+.swipeActions {
+    Button {
+        pendingDelete = item
+    } label: {
+        Label("Delete", systemImage: "trash")
+    }
+    .tint(.red)
+}
+```
+
+Use the destructive role only when the swipe action should delete immediately with no intermediate confirmation surface.
+
 ---
 
 ## 5. Grouped Content & Cards: Use System Patterns
