@@ -2,6 +2,26 @@
 
 Personal collection of Claude Code skills.
 
+## Install
+
+Install a single skill from this repo:
+
+```bash
+npx skills add arjitj2/arjit-skills --skill swiftui-design-principles
+```
+
+Install all skills from this repo:
+
+```bash
+npx skills add arjitj2/arjit-skills --all
+```
+
+You can also list available skills before installing:
+
+```bash
+npx skills add arjitj2/arjit-skills --list
+```
+
 ## Skills
 
 ### address-copilot-review
@@ -32,9 +52,9 @@ End-to-end iOS simulator testing using blitz-iphone MCP and XcodeBuildMCP. Cover
 
 Design principles for building polished, native-feeling SwiftUI apps and widgets. Ensures proper spacing, typography, colors, and widget implementations.
 
-## Setup
+## Development Setup
 
-Symlink each skill into `~/.agents/skills/` and `~/.claude/skills/`:
+For local development, symlink each skill into `~/.agents/skills/` and `~/.claude/skills/`:
 
 ```bash
 # ~/.agents/skills/
