@@ -115,6 +115,29 @@ Useful command pattern:
 gh api repos/<owner>/<repo>/pulls/<pr-number>/comments/<comment-id>/replies -f body='...'
 ```
 
+Important:
+- do not leave your replies stuck in a pending review state
+- after posting replies, explicitly check whether GitHub created any owner reviews with `state: PENDING`
+- if it did, submit those reviews so the replies are actually published on the PR
+
+Useful verification command:
+
+```bash
+gh pr view <pr-number> --json reviews
+```
+
+Useful GraphQL fallback:
+
+```bash
+gh api graphql -f query='query { repository(owner:"<owner>", name:"<repo>") { pullRequest(number:<pr-number>) { reviews(last:20) { nodes { id state body submittedAt author { login } } } } } }'
+```
+
+Submit pending reviews with GraphQL:
+
+```bash
+gh api graphql -f query='mutation($reviewId: ID!, $body: String!) { submitPullRequestReview(input:{pullRequestReviewId:$reviewId, event:COMMENT, body:$body}) { pullRequestReview { id state submittedAt } } }' -f reviewId='<review-id>' -f body='Addressed the corresponding review feedback.'
+```
+
 10. Resolve review threads that are actually addressed.
 
 After replying, inspect thread state and resolve threads that are done.
@@ -133,6 +156,7 @@ gh api graphql -f query='mutation { resolveReviewThread(input:{threadId:"<thread
 
 Resolution rule:
 - resolve when the code change landed or when you made an explicit final decision and replied with rationale
+- only resolve after confirming the reply is fully submitted and not trapped in a pending review
 - do not leave addressed threads open just because no code changed
 - do not resolve threads that still need follow-up in the current PR
 
