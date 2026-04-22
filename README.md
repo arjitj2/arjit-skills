@@ -46,6 +46,10 @@ Originally created by [@zarazhangrui](https://github.com/zarazhangrui/frontend-s
 
 End-to-end iOS simulator testing using blitz-iphone MCP and XcodeBuildMCP. Covers which tool to use and when, gesture mechanics, screenshot discipline, and interaction patterns.
 
+### resolve-merge-conflicts
+
+Resolve PR merge conflicts end-to-end by merging the base branch locally, reconciling conflicted files, validating the result, and pushing the updated branch.
+
 ### swiftui-design-principles
 
 Design principles for building polished, native-feeling SwiftUI apps and widgets. Ensures proper spacing, typography, colors, and widget implementations.
@@ -61,6 +65,7 @@ ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/adding-a-project ~/.agents/
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/creating-skills ~/.agents/skills/creating-skills
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-slides ~/.agents/skills/frontend-slides
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/ios-simulator-testing ~/.agents/skills/ios-simulator-testing
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/resolve-merge-conflicts ~/.agents/skills/resolve-merge-conflicts
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/swiftui-design-principles ~/.agents/skills/swiftui-design-principles
 
 # ~/.claude/skills/
@@ -69,5 +74,6 @@ ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/adding-a-project ~/.claude/
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/creating-skills ~/.claude/skills/creating-skills
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-slides ~/.claude/skills/frontend-slides
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/ios-simulator-testing ~/.claude/skills/ios-simulator-testing
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/resolve-merge-conflicts ~/.claude/skills/resolve-merge-conflicts
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/swiftui-design-principles ~/.claude/skills/swiftui-design-principles
 ```
