@@ -24,17 +24,25 @@ npx skills add arjitj2/arjit-skills --list
 
 ## Skills
 
-### address-copilot-review
-
-Handle GitHub Copilot PR review comments end-to-end, including code fixes, verification, replies, and thread resolution.
-
 ### adding-a-project
 
 Workflow for adding a new project to the personal site (arjit-me) and resume (arjit-resume), compiling the PDF, and pushing live.
 
+### address-copilot-review
+
+Handle GitHub Copilot PR review comments end-to-end, including code fixes, verification, replies, and thread resolution.
+
 ### creating-skills
 
 Meta-skill for creating new skills in this repo and symlinking them into agent directories.
+
+### deslop
+
+Coordinate an eight-lane cleanup of duplicated code, shared types, unused code, circular dependencies, weak types, defensive fallbacks, legacy paths, and AI-style clutter.
+
+### frontend-design
+
+Create distinctive, production-grade frontend interfaces with high design quality.
 
 ### frontend-slides
 
@@ -60,18 +68,22 @@ For local development, symlink each skill into `~/.agents/skills/` and `~/.claud
 
 ```bash
 # ~/.agents/skills/
-ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/address-copilot-review ~/.agents/skills/address-copilot-review
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/adding-a-project ~/.agents/skills/adding-a-project
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/address-copilot-review ~/.agents/skills/address-copilot-review
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/creating-skills ~/.agents/skills/creating-skills
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/deslop ~/.agents/skills/deslop
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-design ~/.agents/skills/frontend-design
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-slides ~/.agents/skills/frontend-slides
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/ios-simulator-testing ~/.agents/skills/ios-simulator-testing
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/resolve-merge-conflicts ~/.agents/skills/resolve-merge-conflicts
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/swiftui-design-principles ~/.agents/skills/swiftui-design-principles
 
 # ~/.claude/skills/
-ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/address-copilot-review ~/.claude/skills/address-copilot-review
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/adding-a-project ~/.claude/skills/adding-a-project
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/address-copilot-review ~/.claude/skills/address-copilot-review
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/creating-skills ~/.claude/skills/creating-skills
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/deslop ~/.claude/skills/deslop
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-design ~/.claude/skills/frontend-design
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-slides ~/.claude/skills/frontend-slides
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/ios-simulator-testing ~/.claude/skills/ios-simulator-testing
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/resolve-merge-conflicts ~/.claude/skills/resolve-merge-conflicts
