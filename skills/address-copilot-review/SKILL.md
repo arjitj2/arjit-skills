@@ -83,8 +83,8 @@ If you add new runtime or parsing logic, add focused tests when practical. Prefe
 7. Verify before pushing.
 
 Use the narrowest useful verification for the change:
-- focused `xcodebuild build-for-testing` for touched tests
-- targeted compile checks for app code
+- focused checks for touched tests
+- targeted syntax, compile, or type checks for touched code
 - broader verification only when necessary
 
 Be explicit if environment issues block verification.

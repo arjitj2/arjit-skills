@@ -32,6 +32,10 @@ Workflow for adding a new project to the personal site (arjit-me) and resume (ar
 
 Handle GitHub Copilot PR review comments end-to-end, including code fixes, verification, replies, and thread resolution.
 
+### create-public-facing-pr
+
+Prepare clean public-facing GitHub pull requests with scoped staging, validation, concise commit messaging, polished PR title/body, push, and final verification.
+
 ### creating-skills
 
 Meta-skill for creating new skills in this repo and symlinking them into agent directories.
@@ -70,6 +74,7 @@ For local development, symlink each skill into `~/.agents/skills/` and `~/.claud
 # ~/.agents/skills/
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/adding-a-project ~/.agents/skills/adding-a-project
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/address-copilot-review ~/.agents/skills/address-copilot-review
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/create-public-facing-pr ~/.agents/skills/create-public-facing-pr
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/creating-skills ~/.agents/skills/creating-skills
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/deslop ~/.agents/skills/deslop
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-design ~/.agents/skills/frontend-design
@@ -81,6 +86,7 @@ ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/swiftui-design-principles ~
 # ~/.claude/skills/
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/adding-a-project ~/.claude/skills/adding-a-project
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/address-copilot-review ~/.claude/skills/address-copilot-review
+ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/create-public-facing-pr ~/.claude/skills/create-public-facing-pr
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/creating-skills ~/.claude/skills/creating-skills
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/deslop ~/.claude/skills/deslop
 ln -sf /Users/arjitjaiswal/repos/arjit-skills/skills/frontend-design ~/.claude/skills/frontend-design
